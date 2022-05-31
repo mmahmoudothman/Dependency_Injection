@@ -1,15 +1,14 @@
-package com.osman.di_test;
+package com.osman.di_test.di.scope;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 
-import javax.inject.Qualifier;
+import javax.inject.Scope;
 
-@Qualifier
+@Scope
 @Documented
 @Retention(RUNTIME)
-public @interface Sugar {
-    String value() default "sugar";
+public @interface ActivityScope {
 }

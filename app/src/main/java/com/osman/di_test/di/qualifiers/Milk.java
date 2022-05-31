@@ -1,4 +1,4 @@
-package com.osman.di_test;
+package com.osman.di_test.di.qualifiers;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 

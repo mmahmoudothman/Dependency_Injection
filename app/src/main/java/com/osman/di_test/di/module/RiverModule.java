@@ -1,4 +1,4 @@
-package com.osman.di_test.module;
+package com.osman.di_test.di.module;
 
 import com.osman.di_test.model.River;
 

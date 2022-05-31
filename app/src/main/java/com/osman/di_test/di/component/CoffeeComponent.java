@@ -1,9 +1,9 @@
-package com.osman.di_test.component;
+package com.osman.di_test.di.component;
 
-import com.osman.di_test.ActivityScope;
-import com.osman.di_test.MainActivity;
-import com.osman.di_test.Milk;
-import com.osman.di_test.Sugar;
+import com.osman.di_test.di.scope.ActivityScope;
+import com.osman.di_test.ui.MainActivity;
+import com.osman.di_test.di.qualifiers.Milk;
+import com.osman.di_test.di.qualifiers.Sugar;
 import com.osman.di_test.model.Coffee;
 
 import dagger.BindsInstance;

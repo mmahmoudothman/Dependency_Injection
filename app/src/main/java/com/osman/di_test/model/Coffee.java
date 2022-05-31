@@ -2,9 +2,9 @@ package com.osman.di_test.model;
 
 import android.util.Log;
 
-import com.osman.di_test.ActivityScope;
-import com.osman.di_test.Milk;
-import com.osman.di_test.Sugar;
+import com.osman.di_test.di.scope.ActivityScope;
+import com.osman.di_test.di.qualifiers.Milk;
+import com.osman.di_test.di.qualifiers.Sugar;
 
 import javax.inject.Inject;
 

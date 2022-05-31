@@ -1,7 +1,7 @@
-package com.osman.di_test.component;
+package com.osman.di_test.di.component;
 
 import com.osman.di_test.model.River;
-import com.osman.di_test.module.RiverModule;
+import com.osman.di_test.di.module.RiverModule;
 
 import javax.inject.Singleton;
 

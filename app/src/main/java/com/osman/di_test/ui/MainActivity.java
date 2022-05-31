@@ -1,13 +1,15 @@
-package com.osman.di_test;
+package com.osman.di_test.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.osman.di_test.component.AppComponent;
-import com.osman.di_test.component.CoffeeComponent;
-import com.osman.di_test.component.DaggerCoffeeComponent;
+import com.osman.di_test.MainApplication;
+import com.osman.di_test.R;
+import com.osman.di_test.di.component.AppComponent;
+import com.osman.di_test.di.component.CoffeeComponent;
+import com.osman.di_test.di.component.DaggerCoffeeComponent;
 import com.osman.di_test.model.Coffee;
 
 import javax.inject.Inject;

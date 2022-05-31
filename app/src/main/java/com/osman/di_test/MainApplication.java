@@ -2,8 +2,8 @@ package com.osman.di_test;
 
 import android.app.Application;
 
-import com.osman.di_test.component.AppComponent;
-import com.osman.di_test.component.DaggerAppComponent;
+import com.osman.di_test.di.component.AppComponent;
+import com.osman.di_test.di.component.DaggerAppComponent;
 
 public class MainApplication extends Application {
     AppComponent appComponent;
