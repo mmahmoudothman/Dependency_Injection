@@ -2,11 +2,13 @@ package com.osman.di_test.model;
 
 import android.util.Log;
 
+import com.osman.di_test.ActivityScope;
 import com.osman.di_test.Milk;
 import com.osman.di_test.Sugar;
 
 import javax.inject.Inject;
 
+@ActivityScope
 public class Coffee {
     private static final String TAG = "Coffee";
     @Inject

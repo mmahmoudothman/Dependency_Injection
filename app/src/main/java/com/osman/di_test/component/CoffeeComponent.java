@@ -1,15 +1,16 @@
-package com.osman.di_test;
+package com.osman.di_test.component;
 
+import com.osman.di_test.ActivityScope;
+import com.osman.di_test.MainActivity;
+import com.osman.di_test.Milk;
+import com.osman.di_test.Sugar;
 import com.osman.di_test.model.Coffee;
-import com.osman.di_test.module.CoffeeModule;
-
-import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
 
-@Singleton
-@Component(modules = CoffeeModule.class)
+@ActivityScope
+@Component(dependencies = AppComponent.class)
 public interface CoffeeComponent {
     Coffee getCoffee();
 
@@ -22,6 +23,8 @@ public interface CoffeeComponent {
 
         @BindsInstance
         Builder milk(@Milk int milk);
+
+        Builder appComponent(AppComponent appComponent);
 
         CoffeeComponent build();
     }

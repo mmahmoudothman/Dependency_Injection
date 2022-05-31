@@ -2,16 +2,19 @@ package com.osman.di_test;
 
 import android.app.Application;
 
+import com.osman.di_test.component.AppComponent;
+import com.osman.di_test.component.DaggerAppComponent;
+
 public class MainApplication extends Application {
-    private CoffeeComponent coffeeComponent;
+    AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        coffeeComponent = DaggerCoffeeComponent.builder().sugar(3).milk(5).build();
+        appComponent = DaggerAppComponent.create();
     }
 
-    public CoffeeComponent getCoffeeComponent() {
-        return coffeeComponent;
+    public AppComponent getAppComponent() {
+        return appComponent;
     }
 }
