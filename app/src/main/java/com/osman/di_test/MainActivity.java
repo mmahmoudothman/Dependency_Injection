@@ -13,15 +13,16 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     @Inject
-    Coffee coffee;
+    Coffee coffee, coffee2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        CoffeeComponent component = DaggerCoffeeComponent.builder().sugar(3).milk(5).build();
+        CoffeeComponent component = ((MainApplication) getApplication()).getCoffeeComponent();
         component.inject(this);
-        Log.e(TAG + " Mahmoud ", coffee.getCoffeeCup());
+        Log.e(TAG + " Mahmoud ",
+                "\n coffee: " + coffee
+                        + "\n coffee: " + coffee2 + "\nfarm for coffee1: : " + coffee.river + "\nfarm for coffee1: : " + coffee2.river);
     }
 }
