@@ -9,7 +9,6 @@ import com.osman.di_test.MainApplication;
 import com.osman.di_test.R;
 import com.osman.di_test.di.component.AppComponent;
 import com.osman.di_test.di.component.CoffeeComponent;
-import com.osman.di_test.di.component.DaggerCoffeeComponent;
 import com.osman.di_test.model.Coffee;
 
 import javax.inject.Inject;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AppComponent component = ((MainApplication) getApplication()).getAppComponent();
-        CoffeeComponent coffeeComponent = DaggerCoffeeComponent.builder().sugar(2).milk(5).appComponent(component).build();
+        CoffeeComponent coffeeComponent = component.getCoffeeComponentBuilder().sugar(2).milk(5).build();
         coffeeComponent.inject(this);
         Log.e(TAG + " Mahmoud ",
                 "\n coffee: " + coffee
