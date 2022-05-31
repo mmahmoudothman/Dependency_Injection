@@ -1,9 +1,16 @@
 package com.osman.di_test.model;
 
-import javax.inject.Inject;
+import android.util.Log;
 
 public class River {
-    @Inject
+    private static final String TAG = "River";
+
+    // for view
     public River() {
+        Log.e(TAG, "Mahmoud River");
+    }
+
+    public String getWater() {
+        return "water";
     }
 }
